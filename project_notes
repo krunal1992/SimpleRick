@@ -1,0 +1,53 @@
+Advantages of using modular structure :
+
+-   separation of concern
+    each module is responsible for specific purpose ex. network module in our case
+-   easy to manager and reuse same module
+
+Advantages of using ktor lib as network library :
+    -   have option to add different network client
+    -   easy to use
+    -   built in KMM support
+    -   lightweight and modern
+    -   support coroutine
+
+Adding details screen
+coil image loading library
+    -   Easy to use
+    -   light weight
+    -   performance
+    -   rich features - GIF support, disk catching
+    -   kotlin first
+
+ktor network error handling :
+    -   added abstraction to handle error in case of network error
+    -   simple try catch condition to check error
+
+Navigation to different screen
+    -   navigation lib compose
+    -   Added NavHost and NavController
+    -   pass route param to redirect to details screen with character id
+    -   By default nav argument take string -- need to explicitly cast to required type i.e. Int in our case
+
+Issues : When we navigate back it again load the data from api.
+solution : catching the network result..
+
+Network catching
+    -   use local hashmap to store the items based on id..
+    -   load the items from the map if already existing
+
+Sticky header
+    -   added details screens -- include episodes list
+    -   need to add extra condition to convert json object to array in case if single episode entry
+    -   added sticky header for episode
+
+issues : nested call in character episode screen, need to improve
+solution : no any solution in videos.... TODO
+
+issues : handle horizontal scroll cut issues
+
+Hilt for dependency injection
+    -   add dependency and appropriate classes
+
+List items API
+    -
